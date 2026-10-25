@@ -1,0 +1,79 @@
+
+/* Make sizing easier to calculate */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  font-size: 1rem;
+  background-color: #f2f2f2;
+}
+
+/* Header */
+header {
+  background-color: #222;
+  color: white;
+  padding: 1rem;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Main content */
+main {
+  padding: 1rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.card {
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: #222;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Tablet: 768px and wider */
+@media (min-width: 48rem) {
+  nav {
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: 1200px and wider */
+@media (min-width: 75rem) {
+  main {
+    max-width: 75rem;
+    margin: 0 auto;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
